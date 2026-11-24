@@ -15,10 +15,15 @@
 </head>
 <body>
 
-    <!-- URL Aplikasi GAS Anda -->
-    <iframe src="https://script.google.com/macros/s/AKfycbyG4D-nC5F78C7JzuvPNTJDIWGZ680kz3tZ8r5NjyG3Cm8P0Zn2__aj2FG-VG7bOLWR/exec"></iframe>
+    <iframe id="app"></iframe>
 
     <script>
+        // URL Aplikasi GAS Anda
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbyG4D-nC5F78C7JzuvPNTJDIWGZ680kz3tZ8r5NjyG3Cm8P0Zn2__aj2FG-VG7bOLWR/exec";
+
+        // Teruskan parameter URL (role, toko, dll) ke GAS
+        document.getElementById('app').src = GAS_URL + location.search;
+
         // Mendaftarkan File Service Worker Resmi
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js')
