@@ -32,6 +32,6 @@ self.addEventListener('fetch', event => {
         caches.open(CACHE_NAME).then(cache => cache.put(req, salinan));
         return res;
       })
-      .catch(() => caches.match(req))
+      .catch(() => caches.match(req, { ignoreSearch: true }))
   );
 });
