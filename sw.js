@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nexus-cache-v2';   // naik dari v1 supaya cache lama terganti
+const CACHE_NAME = 'nexus-cache-v3';   // naik dari v1 supaya cache lama terganti
 const urlsToCache = ['index.html', 'manifest.json'];
 
 self.addEventListener('install', event => {
